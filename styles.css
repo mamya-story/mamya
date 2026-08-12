@@ -1,0 +1,161 @@
+.story {
+    perspective: 1000px;
+}
+
+.story-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.story-food-wrap {
+    opacity: 0;
+    transform: translateY(80px) scale(.9);
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.story.visible .story-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story.visible .story-food-wrap {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}clamp
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 100px 5vw 50px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .hero-title {
+        font-size: 7vw;
+        letter-spacing: -4px;
+        line-height: .82;
+    }
+
+    .hero-food {
+        width: 105vw;
+        max-width: 520px;
+        margin-top: -5px;
+    }
+
+    .scroll-text {
+        bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+
+    /* STORY */
+
+    .story {
+        min-height: 100svh;
+        padding: 90px 6vw;
+    }
+
+    .story-inner {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .story-text {
+        order: 1;
+        text-align: center;
+
+        width: 100%;
+    }
+
+    .story-food-wrap {
+        order: 2;
+
+        width: 100%;
+        min-height: 350px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .story-number {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .story-title {
+        font-size: 18vw;
+        letter-spacing: -4px;
+        margin-bottom: 20px;
+    }
+
+    .story-description {
+        font-size: 16px;
+        line-height: 1.5;
+
+        max-width: 330px;
+    }
+
+    .story-food {
+        width: 110%;
+        max-width: 500px;
+    }
+
+
+    /* FINAL CTA */
+
+    .cta {
+        min-height: 100svh;
+        padding: 60px 6vw;
+    }
+
+    .cta-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cta-small {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .cta-title {
+        font-size: 20vw;
+        letter-spacing: -5px;
+        margin-bottom: 35px;
+    }
+
+    .whatsapp-btn {
+        width: 100%;
+        max-width: 320px;
+
+        padding: 18px 20px;
+
+        font-size: 16px;
+    }
+
+}
